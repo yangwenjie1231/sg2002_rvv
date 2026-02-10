@@ -1,0 +1,13 @@
+/root/xmusic/rvv_ext/build/CMakeFiles/update_build_info.dir
+/root/xmusic/rvv_ext/build/CMakeFiles/menuconfig.dir
+/root/xmusic/rvv_ext/build/CMakeFiles/edit_cache.dir
+/root/xmusic/rvv_ext/build/CMakeFiles/rebuild_cache.dir
+/root/xmusic/rvv_ext/build/pybind11/CMakeFiles/edit_cache.dir
+/root/xmusic/rvv_ext/build/pybind11/CMakeFiles/rebuild_cache.dir
+/root/xmusic/rvv_ext/build/python3.13_maixcam2/CMakeFiles/edit_cache.dir
+/root/xmusic/rvv_ext/build/python3.13_maixcam2/CMakeFiles/rebuild_cache.dir
+/root/xmusic/rvv_ext/build/python3_lib_maixcam_musl_3.11.6/CMakeFiles/edit_cache.dir
+/root/xmusic/rvv_ext/build/python3_lib_maixcam_musl_3.11.6/CMakeFiles/rebuild_cache.dir
+/root/xmusic/rvv_ext/build/main/CMakeFiles/main.dir
+/root/xmusic/rvv_ext/build/main/CMakeFiles/edit_cache.dir
+/root/xmusic/rvv_ext/build/main/CMakeFiles/rebuild_cache.dir

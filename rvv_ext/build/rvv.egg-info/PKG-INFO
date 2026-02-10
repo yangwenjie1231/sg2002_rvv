@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rvv
+Version: 0.1.0
+Summary: RVV accelerated NumPy ops (NumPy-compatible)
+Author: xmusic
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Linux
+Classifier: Programming Language :: C++
+Requires-Python: >=3.8

@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+23fbf67fa567179b887c333302e41721 CMakeFiles/menuconfig
+ed1cd9527fa4a4defbd32af6de2d4c5c CMakeFiles/update_build_info

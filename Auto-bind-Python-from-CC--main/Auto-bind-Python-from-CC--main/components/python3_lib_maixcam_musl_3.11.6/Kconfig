@@ -1,0 +1,5 @@
+config COMPONENT_PYTHON3_LIB_MAIXCAM_MUSL_3_11_6
+    bool "Enable python3_lib_maixcam_musl_3.11.6 (Python 3.11.6 headers/libs for MaixCam musl)"
+    default y if TARGET_ARCH_RISCV64
+    help
+        Provides Python 3.11.6 headers (Python.h) and libpython3.11.so for MaixCam musl toolchain builds.

@@ -1,0 +1,157 @@
+mainmenu "C/CPP CMake project framework Kconfig configuration"
+
+menu "Toolchain configuration"
+    comment "Target architecture toolchain configuration (configure x86, ARM64 and RISCV64 toolchains)"
+
+    # 新增：目标架构选择（三选一，新增RISCV64）
+    choice
+        prompt "Target build architecture"
+        default TARGET_ARCH_X86  # 保持默认x86
+        help
+            Select the target architecture for compilation (x86, ARM64 or RISCV64).
+            The corresponding toolchain parameters will be automatically applied.
+
+        config TARGET_ARCH_X86
+            bool "x86_64(Linux)"
+            help
+                Compile project for x86 architecture, use x86 toolchain parameters.
+
+        config TARGET_ARCH_ARM64
+            bool "AArch64 (MaixCam2)"
+            help
+                Compile project for ARM64 architecture, use ARM64 toolchain parameters.
+
+        config TARGET_ARCH_RISCV64
+            bool "RISCV64 (MaixCam/Pro)"
+            help
+                Compile project for RISCV64 architecture, use RISCV64 toolchain parameters.
+                Support both Glibc and Musl toolchains (configure in prefix/path).
+    endchoice
+
+    # X86 工具链配置（原有逻辑不变）
+    config TOOLCHAIN_PATH_X86
+        string "X86 toolchain path"
+        default ""
+        help
+            Absolute path to x86 toolchain directory (e.g., /usr/bin or /opt/x86-toolchain/bin).
+
+    config TOOLCHAIN_PREFIX_X86
+        string "X86 toolchain prefix"
+        default ""
+        help
+            Prefix for x86 toolchain binaries (e.g., x86_64-linux-gnu- for cross-compilation).
+
+    # ARM64 工具链配置（原有逻辑不变）
+    config TOOLCHAIN_PATH_ARM64
+        string "ARM64 toolchain path"
+        default ""
+        help
+            Absolute path to ARM64 toolchain directory (e.g., /opt/aarch64-toolchain/bin).
+
+    config TOOLCHAIN_PREFIX_ARM64
+        string "ARM64 toolchain prefix"
+        default ""
+        help
+            Prefix for ARM64 toolchain binaries (e.g., aarch64-linux-gnu- for cross-compilation).
+
+    # 新增：RISCV64 工具链配置
+    config TOOLCHAIN_PATH_RISCV64
+        string "RISCV64 toolchain path"
+        default ""
+        help
+            Absolute path to RISCV64 toolchain directory (e.g., /opt/riscv64-toolchain/bin).
+            For Glibc: typically /opt/riscv64-linux-gnu/bin
+            For Musl: typically /opt/riscv64-linux-musl/bin
+
+    config TOOLCHAIN_PREFIX_RISCV64
+        string "RISCV64 toolchain prefix"
+        default ""
+        help
+            Prefix for RISCV64 toolchain binaries.
+            Example for Glibc: riscv64-linux-gnu-
+            Example for Musl: riscv64-linux-musl-
+
+    # 自动映射：扩展至RISCV64（原有x86/ARM64逻辑保留）
+    config TOOLCHAIN_PATH
+        string
+        default TOOLCHAIN_PATH_X86 if TARGET_ARCH_X86
+        default TOOLCHAIN_PATH_ARM64 if TARGET_ARCH_ARM64
+        default TOOLCHAIN_PATH_RISCV64 if TARGET_ARCH_RISCV64
+        help
+            Auto-generated toolchain path based on selected target architecture.
+
+    config TOOLCHAIN_PREFIX
+        string
+        default TOOLCHAIN_PREFIX_X86 if TARGET_ARCH_X86
+        default TOOLCHAIN_PREFIX_ARM64 if TARGET_ARCH_ARM64
+        default TOOLCHAIN_PREFIX_RISCV64 if TARGET_ARCH_RISCV64
+        help
+            Auto-generated toolchain prefix based on selected target architecture.
+
+endmenu
+
+# ==============================================
+# 新增：WHL 包打包配置菜单
+# ==============================================
+menu "WHL Package Configuration"
+    comment "Configure Python WHL package metadata and build options"
+
+    # 核心开关：是否打包为WHL包
+    config BUILD_WHL_PACKAGE
+        bool "Enable WHL package build"
+        default n
+        help
+            Enable this option to build a Python WHL package for the compiled C/C++ extension.
+            When enabled, you need to configure the WHL package metadata below.
+
+    # 所有WHL配置项仅在启用BUILD_WHL_PACKAGE时显示
+    if BUILD_WHL_PACKAGE
+
+        # ------------------------------
+        # 必填项：包名和版本号
+        # ------------------------------
+        config WHL_PACKAGE_NAME
+            string "WHL package name (REQUIRED)"
+            default "module"
+            help
+                The final installed package name (e.g., add, my_cpp_extension).
+                This is a REQUIRED field for WHL package.
+
+        config WHL_VERSION
+            string "WHL package version (REQUIRED)"
+            default "0.1.0"
+            help
+                Version number of the WHL package (e.g., 0.1.0, 1.0.0).
+                Follow semantic versioning (MAJOR.MINOR.PATCH).
+                This is a REQUIRED field for WHL package.
+
+        # ------------------------------
+        # 可选元数据：作者/描述信息
+        # ------------------------------
+        config WHL_AUTHOR
+            string "Author name"
+            default "Tao"
+            help
+                Name of the package author (e.g., "Your Name").
+
+        config WHL_DESCRIPTION
+            string "Short description"
+            default "Auto bind Python from C/C++"
+            help
+                Short description of the package (less than 200 characters).
+                This will be shown as "Summary" in `pip show` output.
+
+    endif # BUILD_WHL_PACKAGE
+
+endmenu
+
+menu "SDK Components Configuration"
+    osource "${SDK_PATH}/components/*/Kconfig"
+    osource "${CUSTOM_COMPONENTS_PATH}/*/Kconfig"
+endmenu
+
+menu "Project Components Configuration"
+    osource "${PROJECT_PATH}/../components/*/Kconfig"
+    osource "${PROJECT_PATH}/*/Kconfig"
+    osource "${PROJECT_PATH}/components/*/Kconfig"
+endmenu

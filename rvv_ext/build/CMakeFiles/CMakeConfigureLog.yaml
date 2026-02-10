@@ -1,0 +1,542 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv64-unknown-linux-musl-gcc (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 10.2.0
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /root/xmusic/rvv_ext/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /root/xmusic/rvv_ext/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu"
+      binary: "/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31559/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_31559.dir/build.make CMakeFiles/cmTC_31559.dir/build
+        gmake[1]: Entering directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu'
+        Building C object CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o
+        /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc   -v -o CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc
+        Target: riscv64-unknown-linux-musl
+        Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/cc1 -quiet -v -imultilib lib64xthead/lp64d -iprefix /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/ -isysroot /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv64gcxthead -mabi=lp64d -march=rv64imafdc_xtheadc -auxbase-strip CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccmjibCO.s
+        GNU C17 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)
+        	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/local/include"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include
+        End of search list.
+        GNU C17 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)
+        	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 3507d7abbd4291d8ba23c72f305d6f79
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/as -v --traditional-format -march=rv64gcxthead -march=rv64imafdc_xtheadc -mabi=lp64d -o CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o /tmp/ccmjibCO.s
+        GNU assembler version 2.35 (riscv64-unknown-linux-musl) using BFD version (GNU Binutils) 2.35
+        COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/
+        LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+        Linking C executable cmTC_31559
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31559.dir/link.txt --verbose=1
+        /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc  -v CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -o cmTC_31559 
+        Using built-in specs.
+        COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc
+        COLLECT_LTO_WRAPPER=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper
+        Target: riscv64-unknown-linux-musl
+        Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 
+        COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/
+        LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31559' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2 -plugin /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so -plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYjy11R.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-musl-riscv64xthead.so.1 -o cmTC_31559 /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0 -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31559' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+        gmake[1]: Leaving directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include]
+        end of search list found
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/include]
+        implicit include dirs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/include;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv64-unknown-linux-musl-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_31559/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_31559.dir/build.make CMakeFiles/cmTC_31559.dir/build]
+        ignore line: [gmake[1]: Entering directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-Dk2NCu']
+        ignore line: [Building C object CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc   -v -o CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc]
+        ignore line: [Target: riscv64-unknown-linux-musl]
+        ignore line: [Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/cc1 -quiet -v -imultilib lib64xthead/lp64d -iprefix /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/ -isysroot /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv64gcxthead -mabi=lp64d -march=rv64imafdc_xtheadc -auxbase-strip CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccmjibCO.s]
+        ignore line: [GNU C17 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)]
+        ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)]
+        ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 3507d7abbd4291d8ba23c72f305d6f79]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/as -v --traditional-format -march=rv64gcxthead -march=rv64imafdc_xtheadc -mabi=lp64d -o CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o /tmp/ccmjibCO.s]
+        ignore line: [GNU assembler version 2.35 (riscv64-unknown-linux-musl) using BFD version (GNU Binutils) 2.35]
+        ignore line: [COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/]
+        ignore line: [LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o' '-c' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [Linking C executable cmTC_31559]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31559.dir/link.txt --verbose=1]
+        ignore line: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc  -v CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -o cmTC_31559 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper]
+        ignore line: [Target: riscv64-unknown-linux-musl]
+        ignore line: [Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) ]
+        ignore line: [COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/]
+        ignore line: [LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_31559' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        link line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2 -plugin /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so -plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYjy11R.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-musl-riscv64xthead.so.1 -o cmTC_31559 /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0 -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYjy11R.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-melf64lriscv] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-musl-riscv64xthead.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_31559] ==> ignore
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib]
+          arg [CMakeFiles/cmTC_31559.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d/crt1.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d/crt1.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        implicit dirs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG"
+      binary: "/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a9e31/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a9e31.dir/build.make CMakeFiles/cmTC_a9e31.dir/build
+        gmake[1]: Entering directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG'
+        Building CXX object CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o
+        /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++   -v -o CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++
+        Target: riscv64-unknown-linux-musl
+        Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/cc1plus -quiet -v -imultilib lib64xthead/lp64d -iprefix /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/ -isysroot /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=rv64gcxthead -mabi=lp64d -march=rv64imafdc_xtheadc -auxbase-strip CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccj3X78W.s
+        GNU C++14 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)
+        	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward"
+        ignoring nonexistent directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/local/include"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include"
+        ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include
+        End of search list.
+        GNU C++14 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)
+        	compiled by GNU C version 6.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: c78667711b16100ed13280635b840c3a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/as -v --traditional-format -march=rv64gcxthead -march=rv64imafdc_xtheadc -mabi=lp64d -o CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccj3X78W.s
+        GNU assembler version 2.35 (riscv64-unknown-linux-musl) using BFD version (GNU Binutils) 2.35
+        COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/
+        LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+        Linking CXX executable cmTC_a9e31
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9e31.dir/link.txt --verbose=1
+        /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++  -v CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a9e31 
+        Using built-in specs.
+        COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++
+        COLLECT_LTO_WRAPPER=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper
+        Target: riscv64-unknown-linux-musl
+        Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) 
+        COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/
+        LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9e31' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+         /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2 -plugin /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so -plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1e6ZoZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-musl-riscv64xthead.so.1 -o cmTC_a9e31 /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0 -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9e31' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc'
+        gmake[1]: Leaving directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+          add: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include]
+        end of search list found
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0/backward]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+        collapse include dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/include]
+        implicit include dirs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include/c++/10.2.0/backward;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/include;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/include;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/xmusic/Auto-bind-Python-from-CC--main/Auto-bind-Python-from-CC--main/tools/cmake/compile.cmake:393 (_project)"
+      - "CMakeLists.txt:55 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv64-unknown-linux-musl-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a9e31/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a9e31.dir/build.make CMakeFiles/cmTC_a9e31.dir/build]
+        ignore line: [gmake[1]: Entering directory '/root/xmusic/rvv_ext/build/CMakeFiles/CMakeScratch/TryCompile-9SOkJG']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++   -v -o CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++]
+        ignore line: [Target: riscv64-unknown-linux-musl]
+        ignore line: [Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/cc1plus -quiet -v -imultilib lib64xthead/lp64d -iprefix /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/ -isysroot /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -march=rv64gcxthead -mabi=lp64d -march=rv64imafdc_xtheadc -auxbase-strip CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccj3X78W.s]
+        ignore line: [GNU C++14 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)]
+        ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward"]
+        ignore line: [ignoring nonexistent directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include"]
+        ignore line: [ignoring duplicate directory "/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/../../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/riscv64-unknown-linux-musl/lib64xthead/lp64d]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include/c++/10.2.0/backward]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/include]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/include]
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) version 10.2.0 (riscv64-unknown-linux-musl)]
+        ignore line: [	compiled by GNU C version 6.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: c78667711b16100ed13280635b840c3a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/as -v --traditional-format -march=rv64gcxthead -march=rv64imafdc_xtheadc -mabi=lp64d -o CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccj3X78W.s]
+        ignore line: [GNU assembler version 2.35 (riscv64-unknown-linux-musl) using BFD version (GNU Binutils) 2.35]
+        ignore line: [COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/]
+        ignore line: [LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        ignore line: [Linking CXX executable cmTC_a9e31]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9e31.dir/link.txt --verbose=1]
+        ignore line: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++  -v CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a9e31 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper]
+        ignore line: [Target: riscv64-unknown-linux-musl]
+        ignore line: [Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906) ]
+        ignore line: [COMPILER_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/bin/]
+        ignore line: [LIBRARY_PATH=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d/:/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9e31' '-shared-libgcc' '-march=rv64gcxthead' '-mabi=lp64d' '-march=rv64imafdc_xtheadc']
+        link line: [ /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2 -plugin /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so -plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1e6ZoZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot --eh-frame-hdr -melf64lriscv -dynamic-linker /lib/ld-musl-riscv64xthead.so.1 -o cmTC_a9e31 /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0 -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d -L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o /root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc1e6ZoZ.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-melf64lriscv] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-musl-riscv64xthead.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_a9e31] ==> ignore
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d]
+          arg [-L/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib] ==> dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib]
+          arg [CMakeFiles/cmTC_a9e31.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o]
+          arg [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o] ==> obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d/crt1.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d/crt1.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o]
+        collapse obj [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib/../lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib/../lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../lib/gcc/riscv64-unknown-linux-musl/10.2.0/../../../../riscv64-unknown-linux-musl/lib] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64xthead/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib64/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/usr/lib64/lp64d] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64/lp64d]
+        collapse library dir [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../sysroot/lib] ==> [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d/crt1.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crti.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtbegin.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtend.o;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d/crtn.o]
+        implicit dirs: [/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc/riscv64-unknown-linux-musl/10.2.0;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/lib/gcc;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/riscv64-unknown-linux-musl/lib;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64xthead/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib64/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/usr/lib64/lp64d;/root/xmusic/host-tools/gcc/riscv64-linux-musl-x86_64/sysroot/lib]
+        implicit fwks: []
+      
+      
+...

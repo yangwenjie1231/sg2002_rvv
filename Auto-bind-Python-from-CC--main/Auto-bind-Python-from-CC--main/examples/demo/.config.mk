@@ -1,0 +1,1 @@
+CONFIG_CMAKE_GENERATOR="Unix Makefiles"
