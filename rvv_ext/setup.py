@@ -44,6 +44,12 @@ TARGET_SO_NAME = f"{PACKAGE_NAME}.so"
 TARGET_SO_PATH = os.path.join(PACKAGE_DIR, TARGET_SO_NAME)
 INIT_FILE_PATH = os.path.join(PACKAGE_DIR, "__init__.py")
 
+# Type hint files (optional but recommended for IDE completion)
+STUB_FILE_SRC = os.path.join(os.path.dirname(__file__), f"{PACKAGE_NAME}.pyi")
+PY_TYPED_SRC = os.path.join(os.path.dirname(__file__), "py.typed")
+STUB_FILE_DST = os.path.join(PACKAGE_DIR, f"{PACKAGE_NAME}.pyi")
+PY_TYPED_DST = os.path.join(PACKAGE_DIR, "py.typed")
+
 
 def prepare_package():
     os.makedirs(PACKAGE_DIR, exist_ok=True)
@@ -71,6 +77,12 @@ __author__ = "{AUTHOR}"
 
     shutil.copy(SO_FILE_PATH, TARGET_SO_PATH)
 
+    # Copy type hints if present.
+    if os.path.exists(STUB_FILE_SRC):
+        shutil.copy(STUB_FILE_SRC, STUB_FILE_DST)
+    if os.path.exists(PY_TYPED_SRC):
+        shutil.copy(PY_TYPED_SRC, PY_TYPED_DST)
+
 
 prepare_package()
 
@@ -81,7 +93,7 @@ setup(
     description=DESCRIPTION,
     package_dir={"": "build"},
     packages=find_packages(where="build"),
-    package_data={PACKAGE_NAME: [TARGET_SO_NAME]},
+    package_data={PACKAGE_NAME: [TARGET_SO_NAME, f"{PACKAGE_NAME}.pyi", "py.typed"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: Linux",
