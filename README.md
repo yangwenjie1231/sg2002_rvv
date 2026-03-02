@@ -6,9 +6,8 @@
 
 ---
 
-## 你会遇到的几个关键点（来自实测对话的踩坑总结）
+## 你可能会遇到的几个关键点
 
-- `project.py` 的命令是 **`menuconfig`**（不是 `menuconfi`）。
 - 一定要在项目根目录 `rvv_ext/` 执行构建，不要在 `rvv_ext/main/` 里执行。
   - 否则会生成 `rvv_ext/main/build/...` 的配置并导致输出看起来“无限循环”。
 - 必须设置 SDK 环境变量：
@@ -55,7 +54,7 @@ x = np.ascontiguousarray(x, dtype=np.float32)
 
 并且在打包 wheel 时会把它们一并打入 whl（见 `rvv_ext/setup.py`）。
 
-### 方式 A：安装 wheel 后获得提示（推荐）
+### 方式 A：安装 wheel 后获得提示（推荐）但我懒得打包了
 
 在目标机/开发机安装生成的 wheel 后，IDE 通常会自动读取 `.pyi`，为 `import rvv` 提供补全：
 
