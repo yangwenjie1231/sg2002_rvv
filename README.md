@@ -1,11 +1,10 @@
 ## License
 
-Copyright (C) 2026 Your Name <your@email.com>
+Copyright (C) 2026 Your Name <yangwenjie1231@qq.com>
 
 This library is free software; you can redistribute it and/or modify it
 under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 3 of the License, or (at
-your option) any later version.
+the Free Software Foundation.
 
 This library is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -15,7 +14,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <https://www.gnu.org/licenses/>.
 
-SPDX-License-Identifier: LGPL-3.0-or-later
+SPDX-License-Identifier: LGPL-3.0
 
 # rvv (SG2002/C906 RVV 加速的 NumPy 运算)
 
