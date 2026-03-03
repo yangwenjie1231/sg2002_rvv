@@ -1,3 +1,22 @@
+## License
+
+Copyright (C) 2026 Your Name <your@email.com>
+
+This library is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 3 of the License, or (at
+your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library.  If not, see <https://www.gnu.org/licenses/>.
+
+SPDX-License-Identifier: LGPL-3.0-or-later
+
 # rvv (SG2002/C906 RVV 加速的 NumPy 运算)
 
 此文件夹包含一个小型的 C++/pybind11 Python 扩展，提供 **NumPy 兼容** 的向量/矩阵运算，并为 SG2002 (C906) 提供 **RVV 0.7.1** 快速路径。
