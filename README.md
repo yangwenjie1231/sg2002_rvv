@@ -29,7 +29,7 @@ pip install --no-deps --force-reinstall build/dist/*.whl
 如果你已经有目标设备可用的 wheel，也可以只安装 wheel：
 
 ```bash
-pip install --no-deps --force-reinstall rvv-0.2.2-*.whl
+pip install --no-deps --force-reinstall rvv-0.3.0-*.whl
 ```
 
 ## 用法示例

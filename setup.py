@@ -19,7 +19,7 @@ ext_modules = [
 
 setup(
     name="rvv",
-    version="0.2.2",
+    version="0.3.0",
     author="SG2002-Team",
     description="NumPy-compatible RVV 0.7.1 acceleration for SG2002",
     long_description=open("README.md", encoding="utf-8").read(),
