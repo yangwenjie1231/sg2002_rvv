@@ -1,0 +1,11 @@
+build/
+dist/
+*.so
+*.whl
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+cmake-build-*/
+compile_commands.json

@@ -1,0 +1,23 @@
+# 与「编译.md」一致的 Kconfig 模板
+menu "RVV Build Configuration"
+
+choice
+    prompt "Toolchain"
+    default TOOLCHAIN_THEAD_MUSL
+
+config TOOLCHAIN_NATIVE
+    bool "x86_64 native"
+
+config TOOLCHAIN_THEAD_MUSL
+    bool "T-Head MUSL toolchain (SG2002)"
+
+config TOOLCHAIN_RISCV64
+    bool "Generic RISC-V toolchain"
+
+endchoice
+
+config EXTRA_CXXFLAGS
+    string "Extra CXXFLAGS"
+    default "-O3 -march=rv64gcv0p7 -mrvv-vector-bits=128"
+
+endmenu

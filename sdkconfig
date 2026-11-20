@@ -1,0 +1,3 @@
+# T-Head MUSL 工具链配置
+CONFIG_TOOLCHAIN_THEAD_MUSL=y
+CONFIG_EXTRA_CXXFLAGS="-O3 -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d"
