@@ -57,21 +57,36 @@ void scale(const float* a, float k, float* b, std::size_t n) {
 float dot(const float* a, const float* b, std::size_t n) {
     float sum = 0.0f;
 #if defined(__riscv_vector)
-    size_t vl;
-    vfloat32m4_t vsum = vfmv_v_f_f32m4(0.0f, 4);  // 初始化向量累加器
-    for (size_t i = 0; i < n; i += vl) {
-        vl = vsetvl_e32m4(n - i);
-        vfloat32m4_t va = vle32_v_f32m4(a + i, vl);
-        vfloat32m4_t vb = vle32_v_f32m4(b + i, vl);
-        vfloat32m4_t tmp = vfmul_vv_f32m4(va, vb, vl);
-        vsum = vfadd_vv_f32m4(vsum, tmp, vl);  // 向量累加
+    /*
+     * ⚠️ 2026-11-20 真机修复（MaixCAM / C906，实测 dot(ones(8))=4 而非 8）：
+     *
+     * 原实现把 `vl` 固定写成常数 4：
+     *   vfmv_v_f_f32m4(0.0f, 4)
+     *   vfredosum_vs_f32m4_f32m1(vred, vsum, vred, 4)
+     *
+     * 手册《Configuration-Setting and vl Argument》明确：intrinsic **最多只处理
+     * vl 个元素**。所以水平归约只累加了前 4 个 lane ⇒ n>4 时结果严重偏小
+     * （n=8 得 4、n=1000 得 252）。
+     *
+     * 另外手册说明默认 **tail agnostic**：最后一块不满 vlmax 时，越界 lane 是
+     * 未定义值。因此这里把循环拆成「整 vlmax 块走向量 + 尾部走标量」，
+     * 保证归约时参与运算的每个 lane 都有确定值。
+     */
+    const std::size_t vlmax = vsetvlmax_e32m4();
+    vfloat32m4_t vsum = vfmv_v_f_f32m4(0.0f, vlmax);
+    std::size_t i = 0;
+    for (; i + vlmax <= n; i += vlmax) {
+        vfloat32m4_t va = vle32_v_f32m4(a + i, vlmax);
+        vfloat32m4_t vb = vle32_v_f32m4(b + i, vlmax);
+        vsum = vfadd_vv_f32m4(vsum, vfmul_vv_f32m4(va, vb, vlmax), vlmax);
     }
-    // 水平归约
-    vfloat32m1_t vred = vfmv_v_f_f32m1(0.0f, 4);
-    vred = vfredosum_vs_f32m4_f32m1(vred, vsum, vred, 4);
+    vfloat32m1_t vred = vfmv_v_f_f32m1(0.0f, 1);
+    vred = vfredusum_vs_f32m4_f32m1(vred, vsum, vred, vlmax);
     sum = vfmv_f_s_f32m1_f32(vred);
+    // 尾部不足一个整块：标量收尾，避免读到 agnostic lane
+    for (; i < n; ++i) sum += a[i] * b[i];
 #else
-    for (size_t i = 0; i < n; ++i) sum += a[i] * b[i];
+    for (std::size_t i = 0; i < n; ++i) sum += a[i] * b[i];
 #endif
     return sum;
 }
