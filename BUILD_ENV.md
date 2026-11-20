@@ -88,7 +88,7 @@ Tag_RISCV_arch: rv64i2p0...v0p7...xtheadc2p0
 
 ```text
 rvv-0.2.1-cp311-cp311-musllinux_1_2_riscv64.whl
-sha256: 625b873ee3f0f521a6c7899606af53c818602b67262378e306f00f1716407faa
+sha256: d23e853393d10163197460fd9bd8ab79b520959c3de89f40ede89b3d3b9c1600
 ```
 
 如果目标 pip 不接受 `musllinux_1_2_riscv64` 标签，可使用同一 .so 打包的
