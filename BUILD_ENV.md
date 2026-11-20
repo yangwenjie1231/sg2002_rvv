@@ -69,7 +69,7 @@ riscv64-unknown-linux-musl-g++ \
 ```bash
 file rvv.cpython-311-riscv64-linux-gnu.so
 readelf -A rvv.cpython-311-riscv64-linux-gnu.so | grep Tag_RISCV_arch
-nm -D rvv.cpython-311-riscv64-linux-gnu.so | grep -E 'PyInit|gradient_stats|mul_f32'
+nm -D rvv.cpython-311-riscv64-linux-gnu.so | grep -E 'PyInit|mul_f32|max_f32'
 ```
 
 预期：

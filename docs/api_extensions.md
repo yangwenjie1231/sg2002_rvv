@@ -1,13 +1,9 @@
 # 通用 API 扩展
 
 本次扩展遵循「不改变已有 API」原则：原有 `add/sub/scale/dot/norm_l2/
-normalize`、二维运算和 int8 运算的签名、返回类型保持不变。新增接口分为
-两类：
-
-1. 对焦图像统计：`gradient_stats_u8`（详见
-   [`focus_gradient_api.md`](focus_gradient_api.md)）；
-2. 通用 float32 算子：`abs_f32`、`sum_f32`、`mean_std_f32`、
-   `mul_f32`、`add_scalar_f32`、`clip_f32`、`max_f32`、`min_f32`。
+normalize`、二维运算和 int8 运算的签名、返回类型保持不变。新增的是
+通用 float32 算子：`abs_f32`、`sum_f32`、`mean_std_f32`、
+`mul_f32`、`add_scalar_f32`、`clip_f32`、`max_f32`、`min_f32`。
 
 所有新增 float32 算子都同时提供：
 
@@ -198,9 +194,6 @@ print(rvv.min_f32(np.array([-5.0, 2.5, 1.0], dtype=np.float32)))  # -5.0
 - 成功时返回 `numpy.ndarray` 或 Python 标量，因而不改变原 API 的
   NumPy 使用方式。
 
-`gradient_stats_u8` 是唯一不要求 NumPy 的接口：输入为任意 PEP 3118
-uint8 buffer，输出为 Python `dict`。
-
 类型提示见仓库根目录的 `rvv.pyi`（覆盖全部现有函数与新增函数）；它只用于
 IDE / 类型检查，不影响运行时。
 
@@ -239,18 +232,17 @@ NaN 传播语义。
 add_scalar/clip/max/min），都保持一维、逐元素或单值归约的小接口，避免为
 数量堆叠矩阵/图像专用 API：
 
-- `threshold_u8` 等图像算子暂不加入，优先用 `gradient_stats_u8` 覆盖
-  固件需求；
+- 图像算子（阈值、梯度统计等）不加入本库，由使用方在自己的工程中实现；
 - `matmul` 等已有接口不做重构，避免改变既有行为；
 - 任何需要 RVV 1.0 专用指令的候选实现不加入，保持 0.7.1 兼容。
 
 ## 测试
 
 ```bash
-python tests/test_gradient_stats.py   # 不依赖 NumPy/pytest
 python tests/test_ext_ops.py          # 需要 NumPy
 python tests/test_rvv.py              # 原有回归
 python tests/test_int8.py             # 原有回归
+python tests/device_regression.py     # 必须在本机（MaixCAM）运行
 ```
 
 本机 x86 + MSVC 已验证 scalar 路径；RVV 分支尚未在 SG2002 上编译，

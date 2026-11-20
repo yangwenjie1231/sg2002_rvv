@@ -4,7 +4,7 @@
 
 ## 1. 工具链与 flags
 
-- 工具链：T-Head Xuantie-900 musl GCC 10.2.0
+- 工具链：T-Head Xuantian-900 musl GCC 10.2.0
 - flags：`-mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d`
 - 完整获取方式与 SHA256 见 `BUILD_ENV.md`
 
@@ -32,8 +32,8 @@ wheel 的平台标签仍可用 `musllinux_1_2_riscv64` 描述 libc，两者不�
 ## 4. 真机验证是强制的
 
 0.2.1 的教训：全部 x86 标量测试通过、交叉编译成功、ELF 里也有 RVV 指令，
-**但真机上 dot/norm_l2/sum/max/min 全部算错**，`gradient_stats_u8` 的
-`grad_count`/`saturated_count` 也全错。原因是真机的 intrinsic 语义与预期不同：
+**但真机上 dot/norm_l2/sum/max/min 全部算错**。原因是真机的 intrinsic 语义
+与预期不同：
 
 - tail lane 是 **agnostic**（`vl < vlmax` 时越界 lane 变未定义值）；
 - `vmf*_vf`（标量比较）语义错误；
@@ -43,9 +43,9 @@ wheel 的平台标签仍可用 `musllinux_1_2_riscv64` 描述 libc，两者不�
 
 ⇒ 任何 RVV 代码改动都必须：
 
-1. 在设备上跑算子回归（与纯 Python 参考实现逐项对比）；
+1. 在设备上跑 `tests/device_regression.py`（与纯 Python 参考实现逐项对比）；
 2. 覆盖 `n` 为 1、3、4、7、8、9、15、16、17、33、100、1000 等边界；
-3. 覆盖 `gradient_stats_u8` 的多种 `w×h`、`roi_fraction`、`step`、`offset`、灰度/RGB。
+3. 矩阵覆盖非方阵与小尺寸。
 
 x86 标量测试只能证明算法逻辑，不能证明 RVV 路径。
 
@@ -56,7 +56,7 @@ unzip -o rvv-*.whl -d /tmp/rvv-wheel
 SO=$(find /tmp/rvv-wheel -name '*.so' | head -1)
 file "$SO"                                   # ELF 64-bit RISC-V
 readelf -A "$SO" | grep Tag_RISCV_arch       # 含 v0p7 ... xtheadc2p0
-nm -D "$SO" | grep -E 'PyInit|gradient_stats'
+nm -D "$SO" | grep -E 'PyInit|mul_f32'
 ```
 
 不要用 `py3-none-any` 打运行库（会「安装成功、运行失败」）；stub-only 包才用
@@ -64,13 +64,10 @@ nm -D "$SO" | grep -E 'PyInit|gradient_stats'
 
 ## 6. 当前产物
 
-```text
-rvv-0.2.2-cp311-cp311-musllinux_1_2_riscv64.whl
-sha256: e8274443ffecc00d9621b9f28bfeab72ce61c57a583450d31ff9ae9cb207e424
-```
+`v0.2.2` 是第一个在真机验证过的版本（`v0.2.2` 的 wheel 才是可用的；
+`v0.2.1` 的 wheel 会算出错误的数值，不要使用）。
 
-真机（MaixCAM，192.168.2.216）回归：**223/223 通过**；
-`gradient_stats_u8` 640×480 RGB **3.5 ms/次**。
+真机（MaixCAM）回归：`tests/device_regression.py` 全部通过。
 
 ## 7. 性能说明（避免误判）
 
@@ -78,5 +75,5 @@ sha256: e8274443ffecc00d9621b9f28bfeab72ce61c57a583450d31ff9ae9cb207e424
 `float32` 的转换成本（实测 100k 元素：list 476 ms、`array('f')` 12 ms、
 `numpy` 8.9 ms）。
 
-⇒ **不要用 Python list 做性能对比**；固件场景应传 `bytes`/`memoryview`
-（`gradient_stats_u8` 走 buffer 路径，无转换开销）。
+⇒ **不要用 Python list 做性能对比**；应传 `numpy.ndarray`、`array('f')`
+或其它 buffer，避免转换开销。

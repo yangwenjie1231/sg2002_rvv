@@ -27,8 +27,8 @@ setup(
     ext_modules=ext_modules,
     zip_safe=False,
     python_requires=">=3.8",
-    # The uint8 focus interface only needs the buffer protocol.  NumPy is
-    # optional so the wheel can be installed on firmware images without it.
+    # NumPy is optional: the extension accepts any float32 C-contiguous
+    # buffer, so it can be installed on firmware images without NumPy.
     install_requires=[],
     extras_require={"numpy": ["numpy"]},
 )

@@ -19,50 +19,6 @@ namespace py = pybind11;
         "dtype mismatch: expected " + std::string(expected) \
         + ", got " + std::string(actual))
 
-// ---------- PEP 3118 buffer 校验（gradient_stats_u8 用，不依赖 NumPy） ----------
-void validate_u8_contiguous_buffer(const py::buffer_info& info) {
-    if (info.ndim < 1) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] buf must expose at least one dimension");
-    }
-    if (info.itemsize != 1) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] buf must use 1-byte items, got itemsize=" +
-            std::to_string(info.itemsize));
-    }
-    if (!info.format.empty() && info.format != "B" && info.format != "c") {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] buf must be uint8-compatible "
-            "(PEP 3118 format 'B' or 'c'), got '" + info.format + "'");
-    }
-
-    // Reject non-C-contiguous views. `stride` is the row pitch, so allowing
-    // arbitrary buffer strides here would make the two notions ambiguous.
-    py::ssize_t expected = info.itemsize;
-    for (int d = static_cast<int>(info.ndim) - 1; d >= 0; --d) {
-        if (info.shape[d] == 0) {
-            expected = 0;
-            continue;
-        }
-        if (info.shape[d] > 1 && info.strides[d] != expected) {
-            throw std::invalid_argument(
-                "[gradient_stats_u8] buf must be C-contiguous; "
-                "sliced/transposed views are not supported");
-        }
-        expected *= info.shape[d];
-    }
-}
-
-py::dict gradient_stats_to_dict(const rvv::core::GradientStats& stats) {
-    py::dict result;
-    result["grad_sum"] = stats.grad_sum;
-    result["lum_sum"] = stats.lum_sum;
-    result["lum_sq_sum"] = stats.lum_sq_sum;
-    result["count"] = stats.count;
-    result["saturated_count"] = stats.saturated_count;
-    return result;
-}
-
 // ---------- float32 工具 ----------
 std::vector<float> np_to_vec_f32(py::array_t<float> a) {
     py::buffer_info info = a.request();
@@ -388,92 +344,6 @@ MatI8 py_scale2d_i8(MatI8 A, int8_t k) {
     return vec_to_mat_i8(vB, info.shape[0], info.shape[1]);
 }
 
-//--------------------------------------
-// uint8 对焦统计（PEP 3118 buffer -> dict）
-//--------------------------------------
-py::dict py_gradient_stats_u8(py::buffer buf,
-                              py::ssize_t width,
-                              py::ssize_t height,
-                              py::ssize_t stride,
-                              double roi_fraction,
-                              py::ssize_t step_x,
-                              py::ssize_t step_y,
-                              py::ssize_t offset,
-                              py::ssize_t channels) {
-    if (width < 0 || height < 0 || stride < 0 ||
-        step_x < 0 || step_y < 0 || offset < 0) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] width/height/stride/step/offset "
-            "must be non-negative");
-    }
-    if (!std::isfinite(roi_fraction)) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] roi_fraction must be finite");
-    }
-    if (offset < 1) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] offset must be >= 1");
-    }
-    if (channels != 1 && channels != 3) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] channels must be 1 (gray) or 3 (RGB888), "
-            "got " + std::to_string(channels));
-    }
-
-    const std::size_t w = static_cast<std::size_t>(width);
-    const std::size_t h = static_cast<std::size_t>(height);
-    if (w < 4 || h < 4) {
-        return gradient_stats_to_dict(rvv::core::GradientStats{});
-    }
-
-    py::buffer_info info = buf.request();
-    validate_u8_contiguous_buffer(info);
-
-    const std::size_t ch = static_cast<std::size_t>(channels);
-    if (w > std::numeric_limits<std::size_t>::max() / ch) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] width * channels overflows size_t");
-    }
-    const std::size_t row_bytes = w * ch;
-    const std::size_t pitch = static_cast<std::size_t>(stride);
-    if (pitch < row_bytes) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] stride (" + std::to_string(pitch) +
-            ") is smaller than width*channels (" +
-            std::to_string(row_bytes) + ")");
-    }
-
-    std::size_t required = row_bytes;
-    if (h > 1) {
-        const std::size_t max_size =
-            std::numeric_limits<std::size_t>::max();
-        if (pitch > (max_size - row_bytes) / (h - 1)) {
-            throw std::invalid_argument(
-                "[gradient_stats_u8] buffer span overflows size_t");
-        }
-        required = (h - 1) * pitch + row_bytes;
-    }
-    const std::size_t nbytes =
-        static_cast<std::size_t>(info.size) *
-        static_cast<std::size_t>(info.itemsize);
-    if (nbytes == 0) {
-        return gradient_stats_to_dict(rvv::core::GradientStats{});
-    }
-    if (nbytes < required) {
-        throw std::invalid_argument(
-            "[gradient_stats_u8] buffer is too small: need at least " +
-            std::to_string(required) + " bytes, got " +
-            std::to_string(nbytes));
-    }
-
-    const auto* data = static_cast<const std::uint8_t*>(info.ptr);
-    const auto stats = rvv::core::gradient_stats_u8(
-        data, w, h, pitch, roi_fraction,
-        static_cast<std::size_t>(step_x),
-        static_cast<std::size_t>(step_y),
-        static_cast<std::size_t>(offset), ch);
-    return gradient_stats_to_dict(stats);
-}
 
 //--------------------------------------
 // Python 模块定义
@@ -519,21 +389,4 @@ PYBIND11_MODULE(rvv, m) {
     m.def("dot_i8",      &py_dot_i8,      "int8 点积");
     m.def("add2d_i8",    &py_add2d_i8,    "int8 矩阵加法");
     m.def("scale2d_i8",  &py_scale2d_i8,  "int8 矩阵标量乘法");
-
-    // ---------- uint8 图像统计 ----------
-    m.def(
-        "gradient_stats_u8",
-        &py_gradient_stats_u8,
-        py::arg("buf"),
-        py::arg("width"),
-        py::arg("height"),
-        py::arg("stride"),
-        py::arg("roi_fraction") = 0.7,
-        py::arg("step_x") = 0,
-        py::arg("step_y") = 0,
-        py::arg("offset") = 2,
-        py::arg("channels") = 3,
-        "对焦清晰度统计（uint8 buffer / PEP 3118，不要求 NumPy）\n"
-        "返回 {grad_sum, lum_sum, lum_sq_sum, count, saturated_count}。\n"
-        "grad_sum 为前向差分平方和，RGB888 按 (R+G+B)/3 转灰度。");
 }

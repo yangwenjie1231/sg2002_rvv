@@ -4,11 +4,9 @@ The module is a compiled extension. This stub describes the public Python
 surface for IDE/type-checker users; it does not affect runtime behaviour.
 """
 
-from typing import Dict, Tuple, Union
+from typing import Tuple
 
 import numpy as np
-
-BufferLike = Union[bytes, bytearray, memoryview]
 
 
 # float32 vectors
@@ -42,16 +40,3 @@ def add_scalar_f32(a: np.ndarray, k: float) -> np.ndarray: ...
 def clip_f32(a: np.ndarray, lo: float, hi: float) -> np.ndarray: ...
 def max_f32(a: np.ndarray) -> float: ...
 def min_f32(a: np.ndarray) -> float: ...
-
-# uint8 focus statistics
-def gradient_stats_u8(
-    buf: BufferLike,
-    width: int,
-    height: int,
-    stride: int,
-    roi_fraction: float = ...,
-    step_x: int = ...,
-    step_y: int = ...,
-    offset: int = ...,
-    channels: int = ...,
-) -> Dict[str, Union[int, float]]: ...
